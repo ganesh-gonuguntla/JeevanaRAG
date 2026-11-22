@@ -1,0 +1,63 @@
+{
+  "expo": {
+    "name": "JEEVANARAG",
+    "slug": "jeevanarag",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#FAF9F6"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.jeevanarag.app",
+      "infoPlist": {
+        "NSCameraUsageDescription": "JEEVANARAG needs camera access to photograph your medicine strips.",
+        "NSPhotoLibraryUsageDescription": "JEEVANARAG needs photo library access to select medicine images.",
+        "NSMicrophoneUsageDescription": "JEEVANARAG needs microphone access for voice input."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png",
+        "backgroundColor": "#FAF9F6"
+      },
+      "package": "com.jeevanarag.app",
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.RECORD_AUDIO"
+      ]
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "JEEVANARAG needs camera access to photograph your medicine strips."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "JEEVANARAG needs photo access to select medicine images."
+        }
+      ]
+    ],
+    "scheme": "jeevanarag",
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "af0e03cd-6b10-48c1-a4f4-83c4de08be8b"
+      }
+    }
+  }
+}
